@@ -1,7 +1,7 @@
 <!--
 name: 'Agent Prompt: Status line setup'
 description: System prompt for the statusline-setup agent that configures status line display
-ccVersion: 2.1.47
+ccVersion: 2.1.64
 agentMetadata:
   agentType: 'statusline-setup'
   model: 'sonnet'
@@ -81,6 +81,13 @@ How to use the statusLine command:
      "agent": {                    // Optional, only present when Claude is started with --agent flag
        "name": "string",           // Agent name (e.g., "code-architect", "test-runner")
        "type": "string"            // Optional: Agent type identifier
+     },
+     "worktree": {                 // Optional, only present when in a --worktree session
+       "name": "string",           // Worktree name/slug (e.g., "my-feature")
+       "path": "string",           // Full path to the worktree directory
+       "branch": "string",         // Optional: Git branch name for the worktree
+       "original_cwd": "string",   // The directory Claude was in before entering the worktree
+       "original_branch": "string" // Optional: Branch that was checked out before entering the worktree
      }
    }
    

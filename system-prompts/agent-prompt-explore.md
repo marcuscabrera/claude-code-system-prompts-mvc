@@ -12,7 +12,7 @@ agentMetadata:
   model: 'haiku'
   whenToUseDynamic: true
   disallowedTools:
-    - Task
+    - Agent
     - ExitPlanMode
     - Edit
     - Write
